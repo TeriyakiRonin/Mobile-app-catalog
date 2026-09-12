@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b2d24">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ash & Cairn">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<title>Ash & Cairn Soapworks</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand">ASH &amp; CAIRN</div>
+  <div class="sub">SOAPWORKS Co.</div>
+  <div class="tag">ROOTED IN MYTH. FORGED BY NATURE.</div>
+</header>
+
+<main>
+  <section class="toolbar">
+    <input id="search" type="search" placeholder="Search soaps or scent notes…">
+    <select id="collection"><option value="">All Collections</option></select>
+  </section>
+  <div class="toolbar secondary">
+    <button id="installBtn" hidden>Install App</button>
+    <button id="exportBtn">Export Edits</button>
+    <label class="importLabel">Import Edits<input id="importFile" type="file" accept=".json,application/json"></label>
+    <button id="resetBtn" class="danger">Reset</button>
+  </div>
+  <p id="count" class="count"></p>
+  <section id="grid" class="grid"></section>
+</main>
+
+<div id="detail" class="sheet hidden">
+  <div class="sheet-card">
+    <button id="closeBtn" class="close">×</button>
+    <img id="detailImg" class="hero" alt="">
+    <div class="detail-pad">
+      <div id="detailCollection" class="eyebrow"></div>
+      <h1 id="detailName"></h1>
+      <p id="detailScent" class="scent"></p>
+      <div id="notes" class="pills"></div>
+      <div class="detail-actions">
+        <button id="editBtn">Edit Soap</button>
+      </div>
+      <div id="tabs" class="tabs"></div>
+      <div id="recipe" class="recipe"></div>
+    </div>
+  </div>
+</div>
+
+<div id="editor" class="sheet hidden">
+  <div class="sheet-card">
+    <button id="editorClose" class="close">×</button>
+    <div class="detail-pad">
+      <h2>Edit Soap</h2>
+      <label>Name<input id="eName"></label>
+      <label>Collection<input id="eCollection"></label>
+      <label>Scent profile<textarea id="eScent" rows="3"></textarea></label>
+      <label>Melt & Pour — Essential Oils<textarea id="eMpEo" rows="10"></textarea></label>
+      <label>Melt & Pour — Fragrance Oils<textarea id="eMpFo" rows="10"></textarea></label>
+      <label>Cold Process — Essential Oils<textarea id="eCpEo" rows="10"></textarea></label>
+      <label>Cold Process — Fragrance Oils<textarea id="eCpFo" rows="10"></textarea></label>
+      <button id="saveBtn" class="save">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
